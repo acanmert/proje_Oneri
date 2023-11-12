@@ -1,11 +1,11 @@
-Top 10 Recommended Movies for 'Yol':
-Vizontele Tuuba
-Tabutta Rövasata
-Hababam Sinifi
-G.O.R.A.
-Karakomik Filmler: Kaçamak
-Ali Baba ve 7 Cüceler
-Vizontele
-Organize Isler
-Pek Yakinda
-Karakomik Filmler: 2 Arada
+'Gece Treni' için En İyi 10 Tavsiye Film:
+Sisli DaÄlar,Gizem,Emre YÄ±lmaz,0.42958600165163036,
+GÃ¶zyaÅÄ±,SavaÅ Hikayesi,Esra AydÄ±n,0.388678450010143,
+YaÅamÄ±n PeÅinde,Gizem,Mehmet Can,0.29727955248784815,
+YaÅamÄ±n PeÅinde,Gizem,Mehmet Can,0.29727955248784815,
+YaÅamÄ±n PeÅinde,Gizem,Aylin YÄ±ldÄ±rÄ±m,0.29727955248784815,
+YaÅamÄ±n PeÅinde,Gizem,Mert Kaya,0.29727955248784815,
+GÃ¶zya??,Savas Hikayesi,Melis Kaya,0.29499717916960333,
+Hayaletin ÃaÄrÄ±sÄ±,Korku,Ä°smail AydÄ±n,0.26644303366024347,
+Sisli DaÄlar,Gizem,Can Kaya,0.2551307833695277,
+Sisli DaÄlar,Gizem,AyÅe YÄ±ldÄ±rÄ±m,0.2551307833695277,
