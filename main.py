@@ -20,7 +20,7 @@ def create_combined_features(row, selected_features):
     return ' '.join([str(row[feature]) for feature in selected_features])
 
 # Benzerlik hesaplamada kullanılacak özellikleri kullanıcıdan al
-selected_features = input("Benzerlik hesaplamak için özellikleri girin (örneğin, title, genre, actors, director, overview): ").split(',')
+selected_features = input("Benzerlik hesaplamak için özellikleri girin : ").split(',')
 
 # Kullanıcının seçtiği özelliklere göre 'combined_features' sütununu oluştur
 data['combined_features'] = data.apply(lambda row: create_combined_features(row, selected_features), axis=1)
@@ -72,21 +72,39 @@ recommendations, similarity_scores = get_movie_recommendations(title, top_n=10)
 
 # Sonuçları çiz ve göster
 plt.figure(figsize=(10, 6))
-plt.barh(range(len(recommendations)), similarity_scores)
+if(secim==3):
+    i = 0;
+    for sonuclar in recommendations:
+        name=sonuclar[0]+sonuclar[1]
+        plt.barh(name, similarity_scores[i])
+        i=i+1;
+
+else:
+    i = 0;
+    for sonuclar in recommendations:
+        if(secim==1):
+            name=sonuclar[0]
+        else:
+            name=sonuclar[0]+sonuclar[2]
+
+        plt.barh(name, similarity_scores[i])
+        i=i+1
+i=0
 
 plt.xlabel('Kosinüs Benzerliği')
-plt.ylabel('Film Başlığı')
-plt.title(f"'{title}' için Kosinüs Benzerliğine Göre En İyi 10 Tavsiye Film")
+plt.ylabel('')
+plt.title(f"'{title}' için Kosinüs Benzerliğine Göre En İyi 10 Tavsiye ")
 plt.tight_layout()
 plt.show()
+plt.savefig('output.png')
 
 # Tavsiyeleri bir metin dosyasına yaz
 output_file = 'output.txt'
 with open(output_file, 'w', encoding='utf-8') as file:
-    file.write(f"'{title}' için En İyi 10 Tavsiye Film:\n")
+    file.write(f"'{title}' için En İyi 10 Tavsiye :\n")
     i=0
     for sonuc in recommendations:
 
         file.write(str(sonuc[0]) + ',' + str(sonuc[1]) + ',' + str(sonuc[2]) + ',' + str(similarity_scores[i]) + ',' + '\n')
         i=i + 1
-print(f"'{title}' için önerilen filmler '{output_file}' dosyasına yazıldı.")
+print(f"'{title}' için öneriler '{output_file}' dosyasına yazıldı.")
