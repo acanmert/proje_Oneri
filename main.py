@@ -51,6 +51,7 @@ def get_movie_recommendations(title, top_n=10,):
         data2='tur'
         data3='yazar'
     elif  secim==3:
+        yeni=data[data['numara'] == int(title)]
         index = data[data['numara'] == int(title)].index[0]
         similarity_scores = list(enumerate(cosine_sim[index]))
         similarity_scores = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
